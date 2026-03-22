@@ -48,13 +48,12 @@ export default function Home() {
         style={{
           marginTop: "30px",
           padding: "12px 24'px",
-          backgroundColor : "#0f0f0f"
-          color: "#000",
           border: "none",
           borderRadius: "8px",
           fontSize: "16px",
           cursor: "pointer",
           fontWeight: "bold",
+          backgroundColor: "#fof0f0"
         }}
       >
         Start Your Journey
