@@ -35,7 +35,23 @@ function FadeInSection({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < 600;
+
+  const runs = [
+    {
+      title: "7km Night Run (Flyover 🔥)",
+      link: "https://strava.app.link/FtrpswsiI1b",
+    },
+    {
+      title: "10km Long Run",
+      link: "https://www.strava.com/activities/456",
+    },
+    {
+      title: "Interval Session (Flyover 🔥)",
+      link: "https://strava.app.link/kYk4zHyiI1b",
+    },
+  ];
 
   return (
     <main style={{ backgroundColor: "#000", color: "#fff", fontFamily: "sans-serif" }}>
@@ -52,11 +68,11 @@ export default function Home() {
           padding: isMobile ? "40px 20px" : "20px",
         }}
       >
-        <h1 style={{ fontSize: isMobile ? "36px" : "56px", marginBottom: "16px" }}>
+        <h1 style={{ fontSize: isMobile ? "36px" : "56px" }}>
           Next Mindset
         </h1>
 
-        <p style={{ opacity: 0.7, maxWidth: "500px", fontSize: isMobile ? "16px" : "20px" }}>
+        <p style={{ opacity: 0.7, maxWidth: "500px", marginTop: "10px" }}>
           Built through running, fatherhood, and showing up daily.
         </p>
 
@@ -80,13 +96,10 @@ export default function Home() {
 
       {/* WHY */}
       <FadeInSection>
-        <section style={{ padding: isMobile ? "60px 20px" : "100px 20px", textAlign: "center" }}>
+        <section style={{ padding: "80px 20px", textAlign: "center" }}>
           <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-            <h2 style={{ fontSize: isMobile ? "24px" : "30px" }}>
-              Why I Started
-            </h2>
-
-            <p style={{ opacity: 0.7, lineHeight: "1.6", marginTop: "10px" }}>
+            <h2>Why I Started</h2>
+            <p style={{ opacity: 0.7, marginTop: "10px" }}>
               This isn’t just about running. It’s about showing up when it’s hard.
               Being present as a father. And building discipline through discomfort.
             </p>
@@ -98,53 +111,62 @@ export default function Home() {
       <FadeInSection>
         <section
           style={{
-            padding: isMobile ? "60px 20px" : "100px 20px",
+            padding: "80px 20px",
             backgroundColor: "#0a0a0a",
             textAlign: "center",
           }}
         >
-          <h2 style={{ fontSize: isMobile ? "24px" : "30px", marginBottom: "30px" }}>
-            Recent Runs
-          </h2>
+          <h2 style={{ marginBottom: "30px" }}>Recent Runs</h2>
 
           <div
             style={{
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
               gap: "20px",
-              alignItems: "center",
               justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            {["7km Night Run", "10km Long Run", "Interval Session"].map(
-              (run, i) => (
+            {runs.map((run, i) => (
+              <a
+                key={i}
+                href={run.link}
+                target="_blank"
+                style={{
+                  textDecoration: "none",
+                  color: "#fff",
+                  width: isMobile ? "100%" : "250px",
+                }}
+              >
                 <div
-                  key={i}
                   style={{
                     backgroundColor: "#111",
                     padding: "20px",
                     borderRadius: "12px",
-                    width: isMobile ? "100%" : "250px",
                     textAlign: "left",
+                    transition: "0.3s",
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = "translateY(-6px)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = "translateY(0px)")
+                  }
                 >
-                  <h3>{run}</h3>
-                  <p style={{ opacity: 0.6 }}>Keep showing up.</p>
+                  <h3>{run.title}</h3>
+                  <p style={{ opacity: 0.6 }}>Tap to view on Strava</p>
                 </div>
-              )
-            )}
+              </a>
+            ))}
           </div>
         </section>
       </FadeInSection>
 
       {/* FEATURE */}
       <FadeInSection>
-        <section style={{ padding: isMobile ? "60px 20px" : "100px 20px", textAlign: "center" }}>
+        <section style={{ padding: "80px 20px", textAlign: "center" }}>
           <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-            <h2 style={{ fontSize: isMobile ? "24px" : "28px" }}>
-              101km in March
-            </h2>
-
+            <h2>101km in March</h2>
             <p style={{ opacity: 0.7, marginTop: "10px" }}>
               The goal was 86km. I pushed further. This wasn’t about distance —
               it was about proving I don’t stop when it gets hard.
