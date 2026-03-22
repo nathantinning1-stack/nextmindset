@@ -2,17 +2,17 @@ export default function Home() {
   return (
     <main style={{ fontFamily: "sans-serif", color: "white", background: "#0a0a0a" }}>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section style={{ textAlign: "center", padding: "120px 20px" }}>
         <h1 style={{ fontSize: "48px", fontWeight: "bold" }}>
-          NEXT MINDSET
+          <span style={{ color: "#4FC3F7" }}>NEXT</span> MINDSET
         </h1>
 
         <p style={{ opacity: 0.7, marginTop: "10px", fontSize: "18px" }}>
           Built through running, fatherhood, and showing up daily.
         </p>
 
-        <a href="https://yourshopifylink.com" target="_blank">
+        <a href="https://next-mindset-2.myshopify.com/" target="_blank">
           <button style={{
             marginTop: "30px",
             padding: "12px 30px",
@@ -26,7 +26,35 @@ export default function Home() {
         </a>
       </section>
 
-      {/* ABOUT / STORY */}
+      {/* FEATURED PRODUCT */}
+      <section style={{ padding: "80px 20px", textAlign: "center" }}>
+        <h2 style={{ fontSize: "28px" }}>Featured Product</h2>
+
+        <div style={{
+          maxWidth: "400px",
+          margin: "40px auto"
+        }}>
+
+          <a href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee?variant=52029442621732" target="_blank">
+            
+            <img
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+              style={{
+                width: "100%",
+                borderRadius: "12px"
+              }}
+            />
+
+            <p style={{ marginTop: "15px", fontSize: "18px" }}>
+              Progress Over Perfection Tee
+            </p>
+
+          </a>
+
+        </div>
+      </section>
+
+      {/* STORY */}
       <section style={{ textAlign: "center", padding: "80px 20px" }}>
         <h2 style={{ fontSize: "28px" }}>Why I Started</h2>
 
@@ -38,47 +66,17 @@ export default function Home() {
         </p>
       </section>
 
-      {/* RUNS SECTION */}
+      {/* RUNS */}
       <section style={{ padding: "80px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "28px" }}>The Work</h2>
 
-        <div style={{ marginTop: "30px" }}>
-          
-          <p>7KM Run</p>
-          <a href="https://strava.app.link/FtrpswsiI1b" target="_blank">
-            View Run
-          </a>
+        <p>7KM Run</p>
+        <a href="https://strava.app.link/FtrpswsiI1b" target="_blank">View Run</a>
 
-          <br /><br />
+        <br /><br />
 
-          <p>Interval Session</p>
-          <a href="https://strava.app.link/kYk4zHyiI1b" target="_blank">
-            View Run
-          </a>
-
-        </div>
-      </section>
-
-      {/* BRAND / SHOP */}
-      <section style={{ textAlign: "center", padding: "80px 20px" }}>
-        <h2 style={{ fontSize: "28px" }}>The Brand</h2>
-
-        <p style={{ opacity: 0.7, marginTop: "10px" }}>
-          Built for people who choose discipline over excuses.
-        </p>
-
-        <a href="https://yourshopifylink.com" target="_blank">
-          <button style={{
-            marginTop: "20px",
-            padding: "12px 30px",
-            borderRadius: "8px",
-            border: "none",
-            fontSize: "16px",
-            cursor: "pointer"
-          }}>
-            Visit Store
-          </button>
-        </a>
+        <p>Interval Session</p>
+        <a href="https://strava.app.link/kYk4zHyiI1b" target="_blank">View Run</a>
       </section>
 
       {/* FOOTER */}
