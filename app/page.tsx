@@ -2,17 +2,23 @@ export default function Home() {
   return (
     <main
       style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#0f0f0f",
+        color: "#fff",
         textAlign: "center",
-        marginTop: "100px",
-        fontFamily: "Arial",
         padding: "20px",
+        fontFamily: "Arial",
       }}
     >
-      <h1 style={{ fontSize: "40px", marginBottom: "10px" }}>
+      <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
         Next Mindset
       </h1>
 
-      <p style={{ fontSize: "18px", color: "#555" }}>
+      <p style={{ fontSize: "18px", color: "#aaa", maxWidth: "500px" }}>
         Built through running, fatherhood, and showing up daily.
       </p>
 
@@ -20,12 +26,13 @@ export default function Home() {
         style={{
           marginTop: "30px",
           padding: "14px 28px",
-          backgroundColor: "#000",
-          color: "#fff",
+          backgroundColor: "#fff",
+          color: "#000",
           border: "none",
           borderRadius: "10px",
           fontSize: "16px",
           cursor: "pointer",
+          fontWeight: "bold",
         }}
       >
         Start Your Journey
