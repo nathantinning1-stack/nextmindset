@@ -1,9 +1,24 @@
 "use client";
+
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
-    <>
+    <main
+      style={{
+        fontFamily: "sans-serif",
+        backgroundColor: "#000",
+        color: "#fff",
+      }}
+    >
       {/* HERO */}
-      <main
+      <section
         style={{
           height: "100vh",
           display: "flex",
@@ -11,140 +26,122 @@ export default function Home() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          backgroundColor: "#0a0a0a",
-          color: "#ffffff",
           padding: "20px",
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0px)" : "translateY(30px)",
+          transition: "all 1s ease",
         }}
       >
-        <h1 style={{ fontSize: "56px", marginBottom: "16px" }}>
+        <h1 style={{ fontSize: "52px", marginBottom: "20px" }}>
           Next Mindset
         </h1>
 
-        <p style={{ fontSize: "20px", opacity: 0.7 }}>
-          Built through discipline, not motivation.
+        <p style={{ opacity: 0.7, maxWidth: "500px", marginBottom: "30px" }}>
+          Built through running, fatherhood, and showing up daily.
         </p>
 
         <button
-          onClick={() =>
-            document
-              .getElementById("journey")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
           style={{
-            marginTop: "40px",
-            padding: "16px 32px",
+            padding: "14px 28px",
             borderRadius: "10px",
             border: "none",
-            fontWeight: "bold",
-            cursor: "pointer",
             backgroundColor: "#fff",
             color: "#000",
+            fontWeight: "bold",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform =
+              "scale(1.05)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform =
+              "scale(1)";
           }}
         >
-          See The Journey
+          Start Your Journey
         </button>
-      </main>
-
-      {/* JOURNEY TIMELINE */}
-      <section
-        id="journey"
-        style={{
-          padding: "120px 20px",
-          backgroundColor: "#111",
-          color: "#fff",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "28px", marginBottom: "30px" }}>
-            The Journey
-          </h2>
-
-          <p style={{ opacity: 0.7, marginBottom: "40px" }}>
-            Progress isn’t linear. Some days feel strong. Others don’t. But every
-            step counts.
-          </p>
-
-          <div style={{ textAlign: "left", lineHeight: "1.8" }}>
-            <p>• Started with short runs and injuries</p>
-            <p>• Built consistency week by week</p>
-            <p>• Pushed past 100km in a single month</p>
-            <p>• Training toward marathon distance</p>
-          </div>
-        </div>
       </section>
 
-      {/* FEATURED RUN */}
+      {/* WHY SECTION */}
       <section
         style={{
-          padding: "120px 20px",
-          backgroundColor: "#0a0a0a",
-          color: "#fff",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "28px", marginBottom: "20px" }}>
-            Featured Run
-          </h2>
-
-          <h3 style={{ fontSize: "36px", marginBottom: "10px" }}>
-            7km Night Run
-          </h3>
-
-          <p style={{ opacity: 0.7 }}>
-            Shins were sore. Downhills hurt. But I kept going. Not every run
-            feels good — but that’s where the real work happens.
-          </p>
-        </div>
-      </section>
-
-      {/* MINDSET */}
-      <section
-        style={{
-          padding: "120px 20px",
-          backgroundColor: "#111",
-          color: "#fff",
+          padding: "100px 20px",
           textAlign: "center",
         }}
       >
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "28px", marginBottom: "20px" }}>
-            The Mindset
+          <h2 style={{ fontSize: "30px", marginBottom: "20px" }}>
+            Why I Started
           </h2>
 
-          <p style={{ lineHeight: "1.8", opacity: 0.8 }}>
-            It’s not about motivation. Motivation fades. Discipline stays. The
-            goal isn’t to feel ready — it’s to show up anyway.
+          <p style={{ opacity: 0.7, lineHeight: "1.6" }}>
+            This isn’t just about running. It’s about showing up when it’s hard.
+            Being present as a father. And building discipline through discomfort.
           </p>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* RUN CARDS */}
       <section
         style={{
-          padding: "120px 20px",
+          padding: "100px 20px",
           backgroundColor: "#0a0a0a",
-          color: "#fff",
           textAlign: "center",
         }}
       >
-        <h2 style={{ marginBottom: "20px" }}>Follow The Process</h2>
+        <h2 style={{ fontSize: "30px", marginBottom: "40px" }}>
+          Recent Runs
+        </h2>
 
-        <button
+        <div
           style={{
-            padding: "16px 32px",
-            borderRadius: "10px",
-            border: "none",
-            fontWeight: "bold",
-            cursor: "pointer",
-            backgroundColor: "#fff",
-            color: "#000",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "20px",
+            justifyContent: "center",
           }}
         >
-          View All Runs
-        </button>
+          {["7km Night Run", "10km Long Run", "Interval Session"].map(
+            (run, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: "#111",
+                  padding: "20px",
+                  borderRadius: "12px",
+                  width: "250px",
+                  textAlign: "left",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.transform =
+                    "translateY(-8px)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.transform =
+                    "translateY(0px)";
+                }}
+              >
+                <h3>{run}</h3>
+                <p style={{ opacity: 0.6 }}>Keep showing up.</p>
+              </div>
+            )
+          )}
+        </div>
       </section>
-    </>
+
+      {/* FOOTER */}
+      <footer
+        style={{
+          padding: "40px",
+          textAlign: "center",
+          opacity: 0.5,
+        }}
+      >
+        <p>Next Mindset © 2026</p>
+      </footer>
+    </main>
   );
 }
