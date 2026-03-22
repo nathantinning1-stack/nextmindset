@@ -6,7 +6,7 @@ export default function Home() {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "0f0f0f",
+      backgroundColor: "#0f0f0f",
       color: "white",
       textAlign: "center",
       padding: "20px"
