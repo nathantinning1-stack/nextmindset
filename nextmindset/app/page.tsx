@@ -47,7 +47,7 @@ export default function Home() {
       <button
         style={{
           marginTop: "30px",
-          padding: "12px 24'px",
+          padding: "12px 24px",
           border: "none",
           borderRadius: "8px",
           fontSize: "16px",
@@ -61,3 +61,4 @@ export default function Home() {
     </main>
   );
 }
+
