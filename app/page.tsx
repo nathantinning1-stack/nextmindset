@@ -39,19 +39,6 @@ export default function Home() {
         </a>
       </section>
 
-      {/* PRODUCT */}
-      <section style={{ marginTop: "80px" }}>
-        <img
-          src="https://next-mindset-2.myshopify.com/cdn/shop/files/3038675290695836352_2048.jpg?v=1771910793&width=832"
-          alt="Next Mindset Shirt"
-          style={{
-            width: "90%",
-            maxWidth: "360px",
-            borderRadius: "12px",
-            boxShadow: "0 0 40px rgba(79,195,247,0.2)",
-          }}
-        />
-
         <h2 style={{ marginTop: "30px" }}>
           Progress Over Perfection Tee
         </h2>
