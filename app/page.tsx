@@ -2,38 +2,39 @@ export default function Home() {
   return (
     <main
       style={{
-        background: "black",
+        minHeight: "100vh",
+        background: "radial-gradient(circle at top, #111 0%, #000 70%)",
         color: "white",
+        fontFamily: "Arial, sans-serif",
         textAlign: "center",
         padding: "80px 20px",
-        fontFamily: "Arial, sans-serif",
       }}
     >
       {/* HERO */}
       <section style={{ maxWidth: "600px", margin: "0 auto" }}>
-        <h1 style={{ fontSize: "48px", margin: 0 }}>
+        <h1 style={{ fontSize: "56px", margin: 0 }}>
           <span style={{ color: "#4FC3F7" }}>NEXT</span>
           <br />
           MINDSET
         </h1>
 
-        <p style={{ opacity: 0.7, marginTop: "20px" }}>
-          Built in discomfort. Worn with purpose.
+        <p style={{ opacity: 0.7, marginTop: "20px", fontSize: "18px" }}>
+          Progress Over Perfection.
         </p>
 
-        <a href="https://next-mindset-2.myshopify.com/collections/all">
+        <a href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee?variant=52029442621732">
           <button
             style={{
               marginTop: "30px",
-              padding: "14px 32px",
-              border: "1px solid white",
+              padding: "14px 36px",
+              border: "1px solid #4FC3F7",
               background: "transparent",
-              color: "white",
+              color: "#4FC3F7",
               fontSize: "16px",
               cursor: "pointer",
             }}
           >
-            Shop The Mindset
+            Buy Now
           </button>
         </a>
       </section>
@@ -41,26 +42,27 @@ export default function Home() {
       {/* PRODUCT */}
       <section style={{ marginTop: "80px" }}>
         <img
-          src="https://next-mindset-2.myshopify.com/products/black-tee-logo-front-and-back?variant=52011816255780"
+          src="https://cdn.shopify.com/s/files/1/0916/2321/6452/files/black-tee-front-back.png"
           alt="Next Mindset Shirt"
           style={{
-            width: "80%",
-            maxWidth: "320px",
-            borderRadius: "8px",
+            width: "90%",
+            maxWidth: "360px",
+            borderRadius: "12px",
+            boxShadow: "0 0 40px rgba(79,195,247,0.2)",
           }}
         />
 
-        <h2 style={{ marginTop: "20px" }}>
-          Black Tee — Front & Back Logo
+        <h2 style={{ marginTop: "30px" }}>
+          Progress Over Perfection Tee
         </h2>
 
-        <p style={{ opacity: 0.7 }}>
-          Built for those who show up when it’s hard.
+        <p style={{ opacity: 0.7, maxWidth: "400px", margin: "10px auto" }}>
+          A reminder to show up every day.
           <br />
-          No shortcuts. No excuses.
+          Not perfect — just consistent.
         </p>
 
-        <a href="https://next-mindset-2.myshopify.com/collections/all">
+        <a href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee?variant=52029442621732">
           <button
             style={{
               marginTop: "20px",
@@ -71,16 +73,29 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            View Collection
+            View Product
           </button>
         </a>
       </section>
 
+      {/* DIVIDER */}
+      <div
+        style={{
+          margin: "80px auto",
+          width: "60px",
+          height: "2px",
+          background: "#4FC3F7",
+          opacity: 0.5,
+        }}
+      />
+
       {/* STORY */}
-      <section style={{ marginTop: "80px", maxWidth: "500px", marginInline: "auto" }}>
+      <section style={{ maxWidth: "500px", margin: "0 auto" }}>
         <h2>Why It Exists</h2>
 
-        <p style={{ opacity: 0.7 }}>This started with running.</p>
+        <p style={{ opacity: 0.7 }}>
+          This started with running.
+        </p>
 
         <p style={{ opacity: 0.7 }}>
           Early mornings. Sore legs. No motivation.
