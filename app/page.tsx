@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function Home() {
   return (
     <main
@@ -10,6 +12,12 @@ export default function Home() {
         padding: "80px 20px",
       }}
     >
+      {/* STRAVA SCRIPT */}
+      <Script
+        src="https://strava-embeds.com/embed.js"
+        strategy="lazyOnload"
+      />
+
       {/* HERO */}
       <section style={{ maxWidth: "600px", margin: "0 auto" }}>
         <h1 style={{ fontSize: "64px", margin: 0, letterSpacing: "2px" }}>
@@ -49,7 +57,7 @@ export default function Home() {
         </a>
       </section>
 
-      {/* VIRAL PROOF */}
+      {/* VIRAL VIDEO PROOF */}
       <section
         style={{
           marginTop: "100px",
@@ -58,9 +66,7 @@ export default function Home() {
           marginRight: "auto",
         }}
       >
-        <h2 style={{ fontSize: "28px" }}>
-          The Work Speaks
-        </h2>
+        <h2 style={{ fontSize: "28px" }}>The Work Speaks</h2>
 
         <p style={{ opacity: 0.6, marginTop: "10px" }}>
           No motivation. Just discipline.
@@ -100,6 +106,30 @@ export default function Home() {
           <br />
           But they’ll see the results.
         </p>
+      </section>
+
+      {/* STRAVA PROOF */}
+      <section
+        style={{
+          marginTop: "100px",
+          maxWidth: "600px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
+        <h2>Real Work. Real Proof.</h2>
+
+        <p style={{ opacity: 0.6, marginTop: "10px" }}>
+          Not talk. Just action.
+        </p>
+
+        <div
+          className="strava-embed-placeholder"
+          data-embed-type="activity"
+          data-embed-id="17795890142"
+          data-style="standard"
+          style={{ marginTop: "30px" }}
+        />
       </section>
 
       {/* PRODUCT */}
