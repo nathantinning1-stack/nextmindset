@@ -42,7 +42,7 @@ export default function Home() {
       {/* PRODUCT */}
       <section style={{ marginTop: "80px" }}>
         <img
-          src="https://next-mindset-2.myshopify.com/products/kids-t-shirt-progress-over-perfection-motivational-tee-next-mindset?variant=52040140128548"
+          src="https://next-mindset-2.myshopify.com/cdn/shop/files/3038675290695836352_2048.jpg?v=1771910793&width=832"
           alt="Next Mindset Shirt"
           style={{
             width: "90%",
