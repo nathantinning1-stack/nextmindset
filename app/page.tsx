@@ -44,7 +44,7 @@ export default function Home() {
         <div className="product-container">
 
           <div className="product-image">
-            <img src="/shirt.jpeg" alt="Next Mindset Shirt" />
+            <img src="/shirt1.jpeg" alt="Next Mindset Shirt" />
           </div>
 
           <div className="product-details">
