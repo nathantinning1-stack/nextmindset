@@ -28,7 +28,10 @@ export default function Home() {
         <div className="overlay" />
 
         <div className="hero-content fade">
-          <h1><span>NEXT</span> MINDSET</h1>
+          <h1>
+            <span>NEXT</span> MINDSET
+          </h1>
+
           <p className="sub">Built Through Discipline</p>
           <p className="small">Running. Fatherhood. Showing up daily.</p>
 
@@ -44,12 +47,16 @@ export default function Home() {
 
         <div className="product-card">
           <div className="image-wrapper">
-            <img src="/1000021177.jpg" alt="Next Mindset Shirt" />
+            <img src="/shirt.jpg" alt="Next Mindset Shirt" />
           </div>
 
           <div className="product-info">
             <h3>Progress Over Perfection Tee</h3>
-            <p>Built for movement. Designed for discipline.</p>
+            <p className="desc">
+              Built for movement. Designed for discipline.
+            </p>
+
+            <p className="price">$39.99</p>
 
             <a
               href="https://www.nextmindsetofficial.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
@@ -133,7 +140,7 @@ export default function Home() {
           margin-top: 10px;
         }
 
-        /* SECTION */
+        /* SECTIONS */
         .section {
           padding: 100px 20px;
           text-align: center;
@@ -156,19 +163,19 @@ export default function Home() {
           opacity: 0.85;
         }
 
-        /* PRODUCT CARD 🔥 */
+        /* PRODUCT CARD */
         .product-card {
           max-width: 400px;
           margin: auto;
           background: #111;
-          border-radius: 12px;
+          border-radius: 14px;
           overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-          transition: transform 0.3s ease;
+          box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+          transition: all 0.3s ease;
         }
 
         .product-card:hover {
-          transform: translateY(-8px);
+          transform: translateY(-10px);
         }
 
         .image-wrapper {
@@ -177,7 +184,8 @@ export default function Home() {
 
         .image-wrapper img {
           width: 100%;
-          display: block;
+          height: 350px;
+          object-fit: cover;
           transition: transform 0.4s ease;
         }
 
@@ -193,10 +201,21 @@ export default function Home() {
           margin: 10px 0;
         }
 
+        .desc {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+
         /* BUTTON */
         .btn {
           display: inline-block;
-          margin-top: 20px;
+          margin-top: 15px;
           padding: 12px 25px;
           background: #4FC3F7;
           color: #000;
