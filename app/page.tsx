@@ -47,7 +47,7 @@ export default function Home() {
 
         <div className="product-card">
           <div className="image-wrapper">
-            <img src="/100021177.jpg" alt="Next Mindset Shirt" />
+            <img src="/shirt.jpeg" alt="Next Mindset Shirt" />
           </div>
 
           <div className="product-info">
