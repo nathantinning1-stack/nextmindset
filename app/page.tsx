@@ -1,11 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import Script from "next/script";
 
 export default function Home() {
 
   useEffect(() => {
-    const elements = document.querySelectorAll(".fade-in");
+    const elements = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,50 +21,48 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", color: "white" }}>
+    <main>
 
       {/* HERO */}
-      <section
-        style={{
-          height: "100vh",
-          backgroundImage: "url('/running.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0,0,0,0.65)",
-          }}
-        />
+      <section className="hero">
+        <div className="overlay" />
 
-        <div className="fade-in" style={{ position: "relative", zIndex: 1 }}>
-          <h1 style={{ fontSize: "56px" }}>
-            <span style={{ color: "#4FC3F7" }}>NEXT</span> MINDSET
-          </h1>
+        <div className="hero-content fade">
+          <h1><span>NEXT</span> MINDSET</h1>
+          <p className="sub">Built Through Discipline</p>
+          <p className="small">Running. Fatherhood. Showing up daily.</p>
 
-          <p style={{ fontSize: "20px", opacity: 0.9 }}>
-            Built Through Discipline
-          </p>
-
-          <a
-            href="https://www.nextmindsetofficial.com/"
-            className="btn"
-          >
+          <a href="https://www.nextmindsetofficial.com/" className="btn">
             Shop Now
           </a>
         </div>
       </section>
 
+      {/* PRODUCT SECTION 🔥 */}
+      <section className="section fade">
+        <h2>Featured Product</h2>
+
+        <div className="product-card">
+          <div className="image-wrapper">
+            <img src="/1000021177.jpg" alt="Next Mindset Shirt" />
+          </div>
+
+          <div className="product-info">
+            <h3>Progress Over Perfection Tee</h3>
+            <p>Built for movement. Designed for discipline.</p>
+
+            <a
+              href="https://www.nextmindsetofficial.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
+              className="btn"
+            >
+              View Product
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* IDENTITY */}
-      <section className="section fade-in">
+      <section className="section dark fade">
         <h2>This Isn’t For Everyone</h2>
         <p>
           This is for the ones who show up when it’s hard.
@@ -76,45 +73,72 @@ export default function Home() {
         </p>
       </section>
 
-      {/* PRODUCT */}
-      <section className="section dark fade-in">
-        <h2>Progress Over Perfection</h2>
-        <p>
-          You don’t need to be perfect.
-          <br />
-          You just need to keep moving.
-        </p>
-      </section>
-
-      {/* FEATURES */}
-      <section className="section fade-in">
-        <h2>Built To Go Further</h2>
-        <p>
-          Lightweight & breathable<br />
-          Built for movement<br />
-          Designed for discipline
-        </p>
-      </section>
-
       {/* CTA */}
-      <section className="section dark fade-in">
+      <section className="section fade">
         <h2>You Already Know What You Need To Do</h2>
         <p>The only question is — are you doing it?</p>
 
-        <a
-          href="https://www.nextmindsetofficial.com/"
-          className="btn"
-        >
+        <a href="https://www.nextmindsetofficial.com/" className="btn">
           Start Now
         </a>
       </section>
 
       {/* STYLES */}
       <style jsx>{`
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+
+        /* HERO */
+        .hero {
+          height: 100vh;
+          background: url('/running.jpg.jpg') center/cover no-repeat;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.85);
+          backdrop-filter: blur(4px);
+        }
+
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          color: white;
+        }
+
+        h1 {
+          font-size: 56px;
+          margin: 0;
+        }
+
+        h1 span {
+          color: #4FC3F7;
+        }
+
+        .sub {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .small {
+          opacity: 0.7;
+          margin-top: 10px;
+        }
+
+        /* SECTION */
         .section {
           padding: 100px 20px;
           text-align: center;
           background: #000;
+          color: white;
         }
 
         .section.dark {
@@ -123,21 +147,57 @@ export default function Home() {
 
         h2 {
           font-size: 32px;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
         }
 
         p {
           max-width: 600px;
           margin: auto;
           opacity: 0.85;
-          line-height: 1.6;
+        }
+
+        /* PRODUCT CARD 🔥 */
+        .product-card {
+          max-width: 400px;
+          margin: auto;
+          background: #111;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+          transform: translateY(-8px);
+        }
+
+        .image-wrapper {
+          overflow: hidden;
+        }
+
+        .image-wrapper img {
+          width: 100%;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+
+        .product-card:hover img {
+          transform: scale(1.05);
+        }
+
+        .product-info {
+          padding: 20px;
+        }
+
+        .product-info h3 {
+          margin: 10px 0;
         }
 
         /* BUTTON */
         .btn {
           display: inline-block;
-          margin-top: 25px;
-          padding: 14px 30px;
+          margin-top: 20px;
+          padding: 12px 25px;
           background: #4FC3F7;
           color: #000;
           font-weight: bold;
@@ -147,18 +207,18 @@ export default function Home() {
         }
 
         .btn:hover {
-          transform: translateY(-3px);
+          transform: translateY(-2px);
           background: #29B6F6;
         }
 
         /* ANIMATION */
-        .fade-in {
+        .fade {
           opacity: 0;
           transform: translateY(40px);
-          transition: all 0.8s ease-out;
+          transition: all 0.8s ease;
         }
 
-        .fade-in.show {
+        .fade.show {
           opacity: 1;
           transform: translateY(0);
         }
