@@ -44,7 +44,7 @@ export default function Home() {
         <div className="product-container">
 
           <div className="product-image">
-            <img src="/shirt1.jpeg" alt="Next Mindset Shirt" />
+            <img src="/shirt1.jpg" alt="Next Mindset Shirt" />
           </div>
 
           <div className="product-details">
@@ -54,7 +54,7 @@ export default function Home() {
               Built for movement. Designed for discipline.
             </p>
 
-            <p className="price">$32.00</p>
+            <p className="price">$37.00</p>
 
             <a
               href="https://www.nextmindsetofficial.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
