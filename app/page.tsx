@@ -30,8 +30,8 @@ export default function Home() {
         <div className="hero-content fade">
           <h1><span>NEXT</span> MINDSET</h1>
 
-          <p className="sub">Built Through Discipline</p>
-          <p className="small">Running. Fatherhood. Showing up daily.</p>
+          <p className="sub">Start Where You Are</p>
+          <p className="small">All you need to do is begin.</p>
 
           <a href="https://www.nextmindsetofficial.com/" className="btn">
             Shop Now
@@ -39,17 +39,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCT SECTION (PREMIUM) */}
+      {/* PRODUCT SECTION */}
       <section className="section fade product-section">
-
         <div className="product-container">
 
-          {/* IMAGE */}
           <div className="product-image">
             <img src="/shirt.jpeg" alt="Next Mindset Shirt" />
           </div>
 
-          {/* TEXT */}
           <div className="product-details">
             <h2>Progress Over Perfection Tee</h2>
 
@@ -70,22 +67,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IDENTITY */}
+      {/* INSPIRATION SECTION */}
       <section className="section dark fade">
-        <h2>This Isn’t For Everyone</h2>
+        <h2>This Is For You</h2>
         <p>
-          This is for the ones who show up when it’s hard.
-          When everything says stop — but you don’t.
-          <br /><br />
-          You don’t wait for motivation.
-          You build discipline.
+          This is for anyone ready to start.<br />
+          You don’t need to be perfect. You don’t need to be ready.<br /><br />
+          You just need to begin.<br /><br />
+          Small progress is still progress.
         </p>
       </section>
 
-      {/* CTA */}
+      {/* FINAL CTA */}
       <section className="section fade">
-        <h2>You Already Know What You Need To Do</h2>
-        <p>The only question is — are you doing it?</p>
+        <h2>All You Need To Do Is Start</h2>
+        <p>
+          You don’t need motivation.<br />
+          You don’t need the perfect plan.<br /><br />
+          Just take the first step.<br /><br />
+          Small progress is still progress.
+        </p>
 
         <a href="https://www.nextmindsetofficial.com/" className="btn">
           Start Now
@@ -166,7 +167,7 @@ export default function Home() {
           opacity: 0.85;
         }
 
-        /* PRODUCT SECTION (PREMIUM) */
+        /* PRODUCT SECTION */
         .product-container {
           max-width: 1100px;
           margin: auto;
