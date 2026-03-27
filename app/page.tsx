@@ -28,9 +28,7 @@ export default function Home() {
         <div className="overlay" />
 
         <div className="hero-content fade">
-          <h1>
-            <span>NEXT</span> MINDSET
-          </h1>
+          <h1><span>NEXT</span> MINDSET</h1>
 
           <p className="sub">Built Through Discipline</p>
           <p className="small">Running. Fatherhood. Showing up daily.</p>
@@ -41,17 +39,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCT SECTION 🔥 */}
-      <section className="section fade">
-        <h2>Featured Product</h2>
+      {/* PRODUCT SECTION (PREMIUM) */}
+      <section className="section fade product-section">
 
-        <div className="product-card">
-          <div className="image-wrapper">
+        <div className="product-container">
+
+          {/* IMAGE */}
+          <div className="product-image">
             <img src="/shirt.jpeg" alt="Next Mindset Shirt" />
           </div>
 
-          <div className="product-info">
-            <h3>Progress Over Perfection Tee</h3>
+          {/* TEXT */}
+          <div className="product-details">
+            <h2>Progress Over Perfection Tee</h2>
+
             <p className="desc">
               Built for movement. Designed for discipline.
             </p>
@@ -65,6 +66,7 @@ export default function Home() {
               View Product
             </a>
           </div>
+
         </div>
       </section>
 
@@ -154,68 +156,54 @@ export default function Home() {
 
         h2 {
           font-size: 32px;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
 
         p {
           max-width: 600px;
           margin: auto;
+          line-height: 1.6;
           opacity: 0.85;
         }
 
-        /* PRODUCT CARD */
-        .product-card {
-          max-width: 400px;
+        /* PRODUCT SECTION (PREMIUM) */
+        .product-container {
+          max-width: 1100px;
           margin: auto;
-          background: #111;
-          border-radius: 14px;
-          overflow: hidden;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-          transition: all 0.3s ease;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
         }
 
-        .product-card:hover {
-          transform: translateY(-10px);
-        }
-
-        .image-wrapper {
-          overflow: hidden;
-        }
-
-        .image-wrapper img {
+        .product-image img {
           width: 100%;
-          height: 350px;
-          object-fit: cover;
-          transition: transform 0.4s ease;
+          border-radius: 12px;
         }
 
-        .product-card:hover img {
-          transform: scale(1.05);
+        .product-details {
+          text-align: left;
         }
 
-        .product-info {
-          padding: 20px;
+        .product-details h2 {
+          font-size: 36px;
         }
 
-        .product-info h3 {
-          margin: 10px 0;
+        .product-details .desc {
+          margin-top: 15px;
+          opacity: 0.8;
         }
 
-        .desc {
-          font-size: 14px;
-          margin-bottom: 10px;
-        }
-
-        .price {
-          font-size: 20px;
+        .product-details .price {
+          font-size: 22px;
           font-weight: bold;
-          margin: 10px 0;
+          margin-top: 15px;
         }
 
         /* BUTTON */
         .btn {
           display: inline-block;
-          margin-top: 15px;
+          margin-top: 20px;
           padding: 12px 25px;
           background: #4FC3F7;
           color: #000;
@@ -240,6 +228,22 @@ export default function Home() {
         .fade.show {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+          .product-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          .product-details {
+            text-align: center;
+          }
+
+          h1 {
+            font-size: 40px;
+          }
         }
       `}</style>
 
