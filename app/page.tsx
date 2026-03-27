@@ -57,7 +57,7 @@ export default function Home() {
               Built for movement. Designed for discipline.
             </p>
 
-            <p className="price">$39.99</p>
+            <p className="price">$32.00</p>
 
             <a
               href="https://www.nextmindsetofficial.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
