@@ -54,6 +54,7 @@ export default function Home() {
                       options: false,
                       buttonWithQuantity: false
                     },
+                    buttonDestination: "modal",
                     styles: {
                       product: {
                         "text-align": "left",
