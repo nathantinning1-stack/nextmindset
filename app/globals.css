@@ -1,15 +1,15 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* BODY */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #0f172a; /* dark navy */
-  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: white;
 }
 
 /* HERO SECTION */
@@ -19,27 +19,17 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 0 10%;
-  position: relative;
+  background: #0f172a;
 }
 
-/* Optional overlay (darkens background if you add image/video later) */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-/* Content */
+/* CONTENT */
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 600px;
 }
 
-/* Title */
+/* TITLE */
 .hero-content h1 {
   font-size: 3rem;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -47,7 +37,7 @@ body {
   color: #00c6ff;
 }
 
-/* Subtitle */
+/* TEXT */
 .sub {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -59,7 +49,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* CTA BUTTON (THIS IS YOUR MAIN FIX) */
+/* BUTTON */
 .cta {
   display: inline-block;
   padding: 14px 28px;
@@ -74,9 +64,4 @@ body {
 .cta:hover {
   transform: translateY(-2px);
   opacity: 0.9;
-}
-
-/* PRODUCTS SECTION */
-.products {
-  padding: 60px 10%;
 }
