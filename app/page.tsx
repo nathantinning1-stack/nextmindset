@@ -100,30 +100,4 @@ export default function Home() {
         </a>
       </section>
 
-      {/* STYLES */}
-      <style jsx>{`
-        body {
-          margin: 0;
-          font-family: Arial, sans-serif;
-        }
-
-        /* HERO */
-        .hero {
-          height: 100vh;
-          background: url('/running.jpg') center/cover no-repeat;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0,0,0,0.75);
-          backdrop-filter: blur(3px);
-
-          /* ✅ FIX CLICK ISSUE */
-          pointer-events: none;
-          z
+      
