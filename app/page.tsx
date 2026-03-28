@@ -33,7 +33,11 @@ export default function Home() {
           <p className="sub">Start Where You Are</p>
           <p className="small">All you need to do is begin.</p>
 
-          <a href="https://next-mindset-2.myshopify.com" className="btn">
+          {/* ✅ FIXED SHOP LINK */}
+          <a
+            href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
+            className="btn"
+          >
             Shop Now
           </a>
         </div>
@@ -57,7 +61,7 @@ export default function Home() {
             <p className="price">$32.00</p>
 
             <a
-              href="https://www.nextmindsetofficial.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
+              href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
               className="btn"
             >
               View Product
@@ -88,165 +92,38 @@ export default function Home() {
           Small progress is still progress.
         </p>
 
-        <a href="https://www.nextmindsetofficial.com/" className="btn">
+        <a
+          href="https://next-mindset-2.myshopify.com/products/progress-over-perfection-t-shirt-next-mindset-motivational-tee"
+          className="btn"
+        >
           Start Now
         </a>
       </section>
 
-     <style jsx>{`
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+      {/* STYLES */}
+      <style jsx>{`
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
 
-  /* HERO */
-  .hero {
-    height: 100vh;
-    background: url('/running.jpg') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+        /* HERO */
+        .hero {
+          height: 100vh;
+          background: url('/running.jpg') center/cover no-repeat;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(4px);
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.75);
+          backdrop-filter: blur(3px);
 
-    /* 🔑 THIS FIXES YOUR BUTTON */
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2; /* 🔑 ABOVE OVERLAY */
-    color: white;
-  }
-
-  h1 {
-    font-size: 56px;
-    margin: 0;
-  }
-
-  h1 span {
-    color: #4FC3F7;
-  }
-
-  .sub {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  .small {
-    opacity: 0.7;
-    margin-top: 10px;
-  }
-
-  /* SECTIONS */
-  .section {
-    padding: 100px 20px;
-    text-align: center;
-    background: #000;
-    color: white;
-  }
-
-  .section.dark {
-    background: #111;
-  }
-
-  h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    max-width: 600px;
-    margin: auto;
-    line-height: 1.6;
-    opacity: 0.85;
-  }
-
-  /* PRODUCT SECTION */
-  .product-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .product-image img {
-    width: 100%;
-    border-radius: 12px;
-  }
-
-  .product-details {
-    text-align: left;
-  }
-
-  .product-details h2 {
-    font-size: 36px;
-  }
-
-  .product-details .desc {
-    margin-top: 15px;
-    opacity: 0.8;
-  }
-
-  .product-details .price {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-  }
-
-  /* BUTTON */
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #4FC3F7;
-    color: #000;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    background: #29B6F6;
-  }
-
-  /* ANIMATION */
-  .fade {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-  }
-
-  .fade.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    .product-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .product-details {
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 40px;
-    }
-  }
-`}</style>
+          /* ✅ FIX CLICK ISSUE */
+          pointer-events: none;
+          z
