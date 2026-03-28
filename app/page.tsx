@@ -15,7 +15,14 @@ export default function Home() {
           <p className="sub">Start Where You Are</p>
           <p className="small">All you need to do is begin.</p>
 
-          <button className="cta">Shop Now</button>
+         <a 
+         href="https://next-mindset-2.myshopify.com/collections/all"
+         target="_blank"
+         rel="noopener noreferrer"
+         className="cta
+         >
+         Shop Now
+         </a>
         </div>
 
       </section>
