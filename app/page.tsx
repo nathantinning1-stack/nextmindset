@@ -3,7 +3,6 @@
 export default function Home() {
   return (
     <main>
-      {/* HERO */}
       <section className="hero">
         <div className="overlay" />
 
@@ -26,7 +25,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCTS (Shopify Buy Button Mount Point) */}
       <section className="products">
         <div id="collection-component"></div>
       </section>
