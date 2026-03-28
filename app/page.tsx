@@ -33,7 +33,7 @@ export default function Home() {
           <p className="sub">Start Where You Are</p>
           <p className="small">All you need to do is begin.</p>
 
-          <a href="https://www.nextmindsetofficial.com/" className="btn">
+          <a href="https://www.next-mindset-2.myshopify.com" className="btn">
             Shop Now
           </a>
         </div>
